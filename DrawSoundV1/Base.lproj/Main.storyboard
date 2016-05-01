@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawSoundV1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vjg-fb-zLE" userLabel="mainImage">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dKh-Rn-Qj1" userLabel="tempDrawImage">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLm-bL-6tq" userLabel="Cyan">
+                                <rect key="frame" x="20" y="484" width="103" height="96"/>
+                                <state key="normal" image="CyanCircle.png"/>
+                                <connections>
+                                    <action selector="colourPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eHE-xD-mtK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Cg-ur-d9t" userLabel="Yellow">
+                                <rect key="frame" x="131" y="484" width="103" height="96"/>
+                                <state key="normal" image="YellowCircle.png"/>
+                                <connections>
+                                    <action selector="colourPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7bn-6b-44c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVe-Sf-Z51" userLabel="Magenta">
+                                <rect key="frame" x="242" y="484" width="103" height="96"/>
+                                <state key="normal" image="MagentaCircle.png"/>
+                                <connections>
+                                    <action selector="colourPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iqe-d6-hsn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK8-Jw-JqU" userLabel="Black">
+                                <rect key="frame" x="353" y="484" width="103" height="96"/>
+                                <state key="normal" image="BlackCircle.png"/>
+                                <connections>
+                                    <action selector="colourPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQ4-Up-FDv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3B6-O4-hvR" userLabel="Play">
+                                <rect key="frame" x="464" y="484" width="103" height="96"/>
+                                <state key="normal" image="PlayImage.png"/>
+                                <connections>
+                                    <action selector="colourPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NH3-jG-P5h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PK8-Jw-JqU" secondAttribute="bottom" constant="20" id="5g8-w2-wgB"/>
+                            <constraint firstItem="dKh-Rn-Qj1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9S0-8l-DaJ"/>
+                            <constraint firstItem="3B6-O4-hvR" firstAttribute="leading" secondItem="PK8-Jw-JqU" secondAttribute="trailing" constant="8" id="Bld-KT-X0A"/>
+                            <constraint firstItem="dKh-Rn-Qj1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="D5R-l4-Xla"/>
+                            <constraint firstItem="PK8-Jw-JqU" firstAttribute="leading" secondItem="DVe-Sf-Z51" secondAttribute="trailing" constant="24" id="Fch-aH-hsu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tLm-bL-6tq" secondAttribute="bottom" constant="20" id="Hd2-wi-Kq1"/>
+                            <constraint firstItem="vjg-fb-zLE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hp5-6X-9VS"/>
+                            <constraint firstItem="8Cg-ur-d9t" firstAttribute="leading" secondItem="tLm-bL-6tq" secondAttribute="trailing" constant="8" id="Ivg-sB-1zf"/>
+                            <constraint firstAttribute="trailing" secondItem="dKh-Rn-Qj1" secondAttribute="trailing" id="KQv-36-kYA"/>
+                            <constraint firstItem="3B6-O4-hvR" firstAttribute="leading" secondItem="PK8-Jw-JqU" secondAttribute="trailing" constant="24" id="Mqa-ss-vo6"/>
+                            <constraint firstAttribute="trailing" secondItem="vjg-fb-zLE" secondAttribute="trailing" id="TA6-Hb-mZn"/>
+                            <constraint firstItem="tLm-bL-6tq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VDG-UY-QPe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3B6-O4-hvR" secondAttribute="trailing" constant="20" id="VPb-1v-GwF"/>
+                            <constraint firstItem="DVe-Sf-Z51" firstAttribute="leading" secondItem="8Cg-ur-d9t" secondAttribute="trailing" constant="8" id="X5i-6z-GsX"/>
+                            <constraint firstItem="PK8-Jw-JqU" firstAttribute="leading" secondItem="DVe-Sf-Z51" secondAttribute="trailing" constant="8" id="XZZ-QH-t5U"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dKh-Rn-Qj1" secondAttribute="bottom" id="akZ-wQ-dwP"/>
+                            <constraint firstItem="8Cg-ur-d9t" firstAttribute="leading" secondItem="tLm-bL-6tq" secondAttribute="trailing" constant="8" id="d13-Gk-lsL"/>
+                            <constraint firstItem="DVe-Sf-Z51" firstAttribute="leading" secondItem="8Cg-ur-d9t" secondAttribute="trailing" constant="15" id="elP-Zc-Md3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DVe-Sf-Z51" secondAttribute="bottom" constant="20" id="fuh-XE-HKa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8Cg-ur-d9t" secondAttribute="bottom" constant="20" id="new-Ff-Kwy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vjg-fb-zLE" secondAttribute="bottom" id="oA2-mb-Hlk"/>
+                            <constraint firstItem="vjg-fb-zLE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vIg-SN-fCC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3B6-O4-hvR" secondAttribute="bottom" constant="20" id="wka-5Y-CNy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainImage" destination="vjg-fb-zLE" id="DBs-w1-26e"/>
+                        <outlet property="tempDrawImage" destination="dKh-Rn-Qj1" id="wik-0c-iTe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BlackCircle.png" width="96" height="96"/>
+        <image name="CyanCircle.png" width="96" height="96"/>
+        <image name="MagentaCircle.png" width="96" height="96"/>
+        <image name="PlayImage.png" width="96" height="96"/>
+        <image name="YellowCircle.png" width="96" height="96"/>
+    </resources>
+</document>
