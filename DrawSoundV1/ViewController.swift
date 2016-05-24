@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     var blue: CGFloat = 0.0
     var opacity: CGFloat = 1.0
     var swiped = false
-    var brushWidth: CGFloat = 10.0
+    var brushWidth: CGFloat = 5.0
     
     let colors: [(CGFloat, CGFloat, CGFloat)] = [
         (0, 1.0, 1.0),
@@ -36,10 +36,8 @@ class ViewController: UIViewController {
             index = 0
         }
         
-        print("pressed \(index)")
-        
         (red, green, blue) = colors[index]
-        print(colors[index])
+       
         if index == colors.count - 1 {
             opacity = 1.0
         }
@@ -66,33 +64,32 @@ class ViewController: UIViewController {
         UIGraphicsBeginImageContext(view.frame.size)
         let context = UIGraphicsGetCurrentContext()
         tempDrawImage.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
-    
-        CGContextMoveToPoint(context, fromPoint.x, toPoint.y)
+        
+        CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
         CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
         
         CGContextSetLineCap(context, .Round)
         CGContextSetLineWidth(context, brushWidth)
-        
         CGContextSetRGBStrokeColor(context, red, green, blue, 1.0)
-        print(red, green, blue)
         CGContextSetBlendMode(context, .Normal)
-        
+   
         CGContextStrokePath(context)
         
         tempDrawImage.image = UIGraphicsGetImageFromCurrentImageContext()
         tempDrawImage.alpha = opacity
         UIGraphicsEndImageContext()
+        
     }
+    
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         swiped = true
         if let touch = touches.first {
             let currentPoint = touch.locationInView(view)
             drawLineFrom(lastPoint, toPoint: currentPoint)
-            
             lastPoint = currentPoint
         }
-     }
+    }
     
      override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if !swiped {
@@ -117,7 +114,5 @@ class ViewController: UIViewController {
         tempDrawImage.image = nil
         
     }
-    
-
 }
 
