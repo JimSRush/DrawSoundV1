@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     }
     
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
-        
+     
         UIGraphicsBeginImageContext(view.frame.size)
         let context = UIGraphicsGetCurrentContext()
         tempDrawImage.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
@@ -112,6 +112,11 @@ class ViewController: UIViewController {
         UIGraphicsEndImageContext()
         
         tempDrawImage.image = nil
+        printSomeRGBValues()
+        
+    }
+    
+    func printSomeRGBValues() {
         
     }
 }
