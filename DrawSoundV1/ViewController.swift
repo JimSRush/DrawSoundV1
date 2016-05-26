@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     var opacity: CGFloat = 1.0
     var swiped = false
     var brushWidth: CGFloat = 5.0
+    let audioController = AudioController()
     
    
     
@@ -44,16 +45,13 @@ class ViewController: UIViewController {
             opacity = 1.0
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -83,10 +81,8 @@ class ViewController: UIViewController {
         tempDrawImage.alpha = opacity
         UIGraphicsEndImageContext()
         
-        
-        
+        audioController.alterSound(Double(fromPoint.y * 27.5))
     }
-    
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         swiped = true
@@ -97,7 +93,7 @@ class ViewController: UIViewController {
         }
     }
     
-     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if !swiped {
             drawLineFrom(lastPoint, toPoint: lastPoint)
         }
@@ -124,7 +120,10 @@ class ViewController: UIViewController {
     
     func printSomeRGBValues(){
         //we have a UIImage
-        //we need to something something
+        //we need to parse it into an array of either color values
+        //or pure int values
+        //we can then perform some mathsy maths and work out what the colour composition is
+        //and apply this to the audiosource(s) in some way
         
     }
 }

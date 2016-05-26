@@ -15,7 +15,11 @@ class AudioController {
         oscillator.start()
     }
 
-//    let two = Double (fromPoint.y * 27.5)
-//    oscillator.frequency = two
+    
+    internal func alterSound(modifiedYPoint: Double) {
+        oscillator.frequency = modifiedYPoint
+    
+    }
+
 
 }
