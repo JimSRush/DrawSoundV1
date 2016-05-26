@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AudioKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var mainImage: UIImageView!

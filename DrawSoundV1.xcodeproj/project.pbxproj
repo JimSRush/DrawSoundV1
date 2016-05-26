@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09A3491DF742B86C2A0F6786 /* libPods-DrawSoundV1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF18579AFDA21BBF64E42AFD /* libPods-DrawSoundV1.a */; };
 		14916CE81CD5A9030014256C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14916CE71CD5A9030014256C /* AppDelegate.swift */; };
 		14916CEA1CD5A9030014256C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14916CE91CD5A9030014256C /* ViewController.swift */; };
 		14916CED1CD5A9030014256C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14916CEB1CD5A9030014256C /* Main.storyboard */; };
@@ -32,6 +33,9 @@
 		14916CFD1CD5B4260014256C /* PlayImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayImage.png; sourceTree = "<group>"; };
 		14916CFE1CD5B4260014256C /* YellowCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowCircle.png; sourceTree = "<group>"; };
 		14916D041CD5B7560014256C /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
+		43BD93B0AF48732956D80C9D /* Pods-DrawSoundV1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawSoundV1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrawSoundV1/Pods-DrawSoundV1.debug.xcconfig"; sourceTree = "<group>"; };
+		C05A5133C0E05DBECD95FFD4 /* Pods-DrawSoundV1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawSoundV1.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrawSoundV1/Pods-DrawSoundV1.release.xcconfig"; sourceTree = "<group>"; };
+		CF18579AFDA21BBF64E42AFD /* libPods-DrawSoundV1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrawSoundV1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A3491DF742B86C2A0F6786 /* libPods-DrawSoundV1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,8 @@
 			children = (
 				14916CE61CD5A9030014256C /* DrawSoundV1 */,
 				14916CE51CD5A9030014256C /* Products */,
+				BF47A73C592CE1701D014C2C /* Pods */,
+				E610B7D8FDFEA63F0D204B6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +94,23 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		BF47A73C592CE1701D014C2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43BD93B0AF48732956D80C9D /* Pods-DrawSoundV1.debug.xcconfig */,
+				C05A5133C0E05DBECD95FFD4 /* Pods-DrawSoundV1.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E610B7D8FDFEA63F0D204B6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF18579AFDA21BBF64E42AFD /* libPods-DrawSoundV1.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14916CF61CD5A9030014256C /* Build configuration list for PBXNativeTarget "DrawSoundV1" */;
 			buildPhases = (
+				81AAF60C88A623645E5F5B1A /* 📦 Check Pods Manifest.lock */,
 				14916CE01CD5A9030014256C /* Sources */,
 				14916CE11CD5A9030014256C /* Frameworks */,
 				14916CE21CD5A9030014256C /* Resources */,
+				D923F18CDCC4E265B51B60D2 /* 📦 Embed Pods Frameworks */,
+				4BF8EA3C479C835FA8F8FFCB /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +185,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BF8EA3C479C835FA8F8FFCB /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrawSoundV1/Pods-DrawSoundV1-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81AAF60C88A623645E5F5B1A /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D923F18CDCC4E265B51B60D2 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrawSoundV1/Pods-DrawSoundV1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14916CE01CD5A9030014256C /* Sources */ = {
@@ -270,6 +345,7 @@
 		};
 		14916CF71CD5A9030014256C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43BD93B0AF48732956D80C9D /* Pods-DrawSoundV1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DrawSoundV1/Info.plist;
@@ -282,6 +358,7 @@
 		};
 		14916CF81CD5A9030014256C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C05A5133C0E05DBECD95FFD4 /* Pods-DrawSoundV1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DrawSoundV1/Info.plist;
