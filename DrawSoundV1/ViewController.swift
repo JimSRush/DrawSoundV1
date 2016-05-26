@@ -21,8 +21,7 @@ class ViewController: UIViewController {
     var swiped = false
     var brushWidth: CGFloat = 5.0
     
-    //audio
-    let oscillator = AKOscillator()
+   
     
     let colors: [(CGFloat, CGFloat, CGFloat)] = [
         (0, 1.0, 1.0),
@@ -48,10 +47,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        oscillator.amplitude = 0.3
-        AudioKit.output = oscillator
-        AudioKit.start()
-        oscillator.start()
+      
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -87,8 +83,7 @@ class ViewController: UIViewController {
         tempDrawImage.alpha = opacity
         UIGraphicsEndImageContext()
         
-        let two = Double (fromPoint.y * 27.5)
-        oscillator.frequency = two
+        
         
     }
     

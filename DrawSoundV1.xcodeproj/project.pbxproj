@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09A3491DF742B86C2A0F6786 /* libPods-DrawSoundV1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF18579AFDA21BBF64E42AFD /* libPods-DrawSoundV1.a */; };
+		1455D5651CF6F00A00B1974A /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1455D5641CF6F00A00B1974A /* AudioController.swift */; };
 		14916CE81CD5A9030014256C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14916CE71CD5A9030014256C /* AppDelegate.swift */; };
 		14916CEA1CD5A9030014256C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14916CE91CD5A9030014256C /* ViewController.swift */; };
 		14916CED1CD5A9030014256C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14916CEB1CD5A9030014256C /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1455D5641CF6F00A00B1974A /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		14916CE41CD5A9030014256C /* DrawSoundV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawSoundV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14916CE71CD5A9030014256C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14916CE91CD5A9030014256C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				14916CEE1CD5A9030014256C /* Assets.xcassets */,
 				14916CF31CD5A9030014256C /* Info.plist */,
 				14916CF91CD5B4260014256C /* Assets */,
+				1455D5641CF6F00A00B1974A /* AudioController.swift */,
 			);
 			path = DrawSoundV1;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14916CEA1CD5A9030014256C /* ViewController.swift in Sources */,
+				1455D5651CF6F00A00B1974A /* AudioController.swift in Sources */,
 				14916CE81CD5A9030014256C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
