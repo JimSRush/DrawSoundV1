@@ -116,7 +116,9 @@ class ViewController: UIViewController {
         
     }
     
-    func printSomeRGBValues() {
+    func printSomeRGBValues(){
+        //we have a UIImage
+        //we need to something something
         
     }
 }
