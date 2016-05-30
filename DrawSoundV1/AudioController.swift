@@ -6,20 +6,37 @@ class AudioController {
 
     //audio
     var fm = AKOscillator()
+    var noise = AKPinkNoise(amplitude: 0.005)
+    var mixer = AKMixer()
     var fmWithADSR : AKAmplitudeEnvelope!
+    var fmWithReverb : AKReverb2!
     var holdDuration = 1.0
     
     init() {
+        fm.amplitude = 0.3
         fmWithADSR = AKAmplitudeEnvelope(fm,
                                              attackDuration: 0.1,
                                              decayDuration: 0.1,
                                              sustainLevel: 0.8,
                                              releaseDuration: 0.1)
         
+        mixer = AKMixer(fmWithADSR, noise)
         
-        AudioKit.output = fmWithADSR
+        fmWithReverb = AKReverb2(mixer)
+        
+        AudioKit.output = fmWithReverb
+        
         AudioKit.start()
         fm.start()
+        noise.start()
+        
+        mixer.start()
+        
+        fmWithReverb.start()
+        
+        
+        
+        
         //fmWithADSR.start()
     }
     
