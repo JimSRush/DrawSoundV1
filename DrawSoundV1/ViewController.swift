@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     @IBAction func colourPressed(sender: AnyObject) {
         
         var index = sender.tag ?? 0
-        
+        audioController.playSound()
         if index < 0 || index >= colors.count {
             index = 0
         }
@@ -82,6 +82,8 @@ class ViewController: UIViewController {
         UIGraphicsEndImageContext()
         
         audioController.alterSound(Double(fromPoint.y * 27.5))
+        
+
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {

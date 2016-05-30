@@ -5,18 +5,42 @@ class AudioController {
 
 
     //audio
-    let oscillator = AKOscillator()
-    
+    var fm = AKOscillator()
+    var fmWithADSR : AKAmplitudeEnvelope!
+    var holdDuration = 1.0
     
     init() {
-        oscillator.amplitude = 0.3
-        AudioKit.output = oscillator
+        fmWithADSR = AKAmplitudeEnvelope(fm,
+                                             attackDuration: 0.1,
+                                             decayDuration: 0.1,
+                                             sustainLevel: 0.8,
+                                             releaseDuration: 0.1)
+        
+        
+        AudioKit.output = fmWithADSR
         AudioKit.start()
-        oscillator.start()
+        fm.start()
+        //fmWithADSR.start()
+    }
+    
+    internal func playSound() {
+        fmWithADSR.start()
+        
+        let delay = 1.0 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue()) {
+            self.stop()
+        }
+        
+        
+    }
+    
+    func stop() {
+        fmWithADSR.stop()
     }
 
     
     internal func alterSound(modifiedYPoint: Double) {
-        oscillator.frequency = modifiedYPoint
+        fm.frequency = modifiedYPoint
     }
 }
