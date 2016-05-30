@@ -22,7 +22,7 @@ class AudioController {
         
         mixer = AKMixer(fmWithADSR, noise)
         
-        fmWithReverb = AKReverb2(mixer)
+        fmWithReverb = AKReverb2(mixer, dryWetMix: 0.8)
         
         AudioKit.output = fmWithReverb
         
