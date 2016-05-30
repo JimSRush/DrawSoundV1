@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DrawSoundV1/AudioController.swift"
+            timestampString = "486287423.260284"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "AudioController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DrawSoundV1.AudioController.noise.getter : AudioKit.AKWhiteNoise"
+                  moduleName = "DrawSoundV1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jason/DrawSoundV1/DrawSoundV1/AudioController.swift"
+                  timestampString = "486287649.68942"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DrawSoundV1.AudioController.noise.setter : AudioKit.AKWhiteNoise"
+                  moduleName = "DrawSoundV1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jason/DrawSoundV1/DrawSoundV1/AudioController.swift"
+                  timestampString = "486287649.689552"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "54">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
